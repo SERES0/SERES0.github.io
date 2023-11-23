@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="description"
         content="SERES: Semantic-Aware Neural Reconstruction from Sparse Views">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="keywords" content="NeRF, NeuS, Neuralangelo">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SERES: Semantic-Aware Neural Reconstruction from Sparse Views</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/cow.png">
+  <link rel="icon" href="./static/images/cow-removebg-preview.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -42,15 +42,13 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div class="navbar-menu">
+ 
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="https://keunhong.com">
       <span class="icon">
@@ -58,9 +56,9 @@
       </span>
       </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
+     
         <a class="navbar-link">
-          More Research
+          Project Page
         </a>
         <div class="navbar-dropdown">
           <a class="navbar-item" href="https://hypernerf.github.io">
@@ -83,44 +81,18 @@
 </nav>
 
 
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">SERES: Semantic-Aware Neural Reconstruction from Sparse Views</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div>
-
-          <div class="column has-text-centered">
+         
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://seres0.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +101,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://seres0.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -137,7 +109,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
+              <!-- Video Link.
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -146,26 +118,17 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span>-->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://seres0.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (coming soon)</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -178,73 +141,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img src="./static/images/teasure.png" width="85%" style="margin-left: auto;margin-right: auto;display: block;">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
+        <p>&nbsp;</p>
+        <span class="dnerf">SERES</span> advances sparse image-based 3D reconstruction, blending semantic insights and geometric regularization for enhanced detail and completeness.</h2>
     </div>
   </div>
 </section>
@@ -258,48 +158,61 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+We propose a semantic-aware neural reconstruction method to generate 3D high-fidelity models from sparse images. To tackle the challenge of severe radiance ambiguity caused by mismatched features in sparse input, we enrich neural implicit representations by adding patch-based semantic logits that are optimized together with the signed distance field and the radiance field.  A novel regularization based on the geometric primitive masks is introduced to mitigate shape ambiguity. The performance of our approach has been verified in experimental evaluation. The average chamfer distances of our reconstruction on the DTU dataset can be reduced by 44% for SparseNeuS and 20% for VolRecon. When working as a plugin for those dense reconstruction baselines such as NeuS and Neuralangelo, the average error on the DTU dataset can be reduced by 69% and 68% respectively.  </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">How SERES works</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/figure_2_update_color.png" width="90%" style="margin-left: auto;margin-right: auto;display: block;">
+          <p>&nbsp;</p>
+          <p>The basic idea of SERES is that computing a neural field from sparse input views for 3D reconstruction, incorrect matching is a major source of unsuccessful reconstruction. By incorporating semantic priors that are visualized as the masks of color patches on an additional layer, more correct matches can be obtained and this will significantly improved the quality of reconstruction.
+          </p>
         </div>
+        <br/>
+
+
       </div>
     </div>
-    <!--/ Paper video. -->
+
+
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Our methods</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/overview.png" width="90%" style="margin-left: auto;margin-right: auto;display: block;">
+          <p>&nbsp;</p>
+          <p>The overall pipeline of  SERES encompasses the capability to reconstruct high-quality geometric meshes from sparse view input. We generate patches and primitives from sparse input and construct a semantic-aware neural field. The semantic matching prior for patches and the point prompt guided regularization are the fundamental components of the semantic-aware neural field. We optimize the learning of the neural field by incorporating the RGB loss obtained from volume rendering, along with the eikonal loss and the region loss obtained from point prompt-guided regularization.          </p>
+        </div>
+        <br/>
+
+
+      </div>
+    </div>
+
+
   </div>
 </section>
 
@@ -307,161 +220,61 @@
 <section class="section">
   <div class="container is-max-desktop">
 
+
     <div class="columns is-centered">
+      <div class="column is-full-width">	
+        <h2 class="title is-3">Experimental results</h2>
 
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h3 class="title is-4">Three views reconstruction on the DTU benchmark</h3>
         <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
+          <img src="./static/images/FigDTUDatasetRes.png" width="100%" style="margin-left: auto;margin-right: auto;display: block;">
+		  <p> Results of reconstruction for models in the DTU benchmark from 3 sparse views (as shown in the first column). The reconstruction results of prior methods are plagued by either geometric distortions (pixelNeRF and MVSNeRF ) or the loss of structural integrity (SparseNeuS and VolRecon ). Our SERES can reconstruct much more complete geometry with details. </p>
+
         </div>
         <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <h3 class="title is-4">Three views reconstruction on the BMVS benchmark</h3>
         <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
+          <img src="./static/images/FigBlendedMVSRes.png" width="100%" style="margin-left: auto;margin-right: auto;display: block;">
+		  <p>  Our SERES pipeline demonstrates superior performance in reconstructing models from the challenging BlendedMVS dataset using only 3 sparse views as shown in the first column. Unlike prior methods that often result in incomplete structures with holes, our approach can reconstruct more complete geometry with details </p>
 
+        </div>
+        <br/>
+        <h3 class="title is-4">SERES in geometric reconstruction and view synthesis as a plugin</h3>
+        <div class="content has-text-justified">
+          <img src="./static/images/owl_update_size.png" width="100%" style="margin-left: auto;margin-right: auto;display: block;">
+		  <img src="./static/images/FigQualitativeRes .png" width="100%" style="margin-left: auto;margin-right: auto;display: block;">
+		  <p> Experimental tests of our SERES as plugins to improve both the Neus and the Neuralangelo baselines, where the owl model is reconstructed from 3 views. It can be observed that the quality of both the reconstructed geometry and the images obtained from novel view synthesis has been significantly improved to approach the ground truth </p>
+
+        </div>
+        <br/>
+        <h3 class="title is-4">Ablation study</h3>
+        <div class="content has-text-justified">
+          <img src="./static/images/FigAblation.png" width="100%" style="margin-left: auto;margin-right: auto;display: block;">
+		  <p> Ablation study to explain the functionality of each module of our SERES pipeline, where ‘W/o Semantic’ and ‘Fixed Semantic’ refer to the results without incorporating semantic priors vs giving a fixed semantic matching prior (i.e., without optimization). The results of ‘W/o Point-prompt’ vs ‘Full’ demonstrate that our point-prompt guided regularization effectively mitigates mesh noise and reduces shape ambiguity. The values of chamfer distance (CD) are also given for each results</p>
+
+        </div>
+        <br/>
+        <h3 class="title is-4">Number of views on the reconstruction</h3>
+        <div class="content has-text-justified">
+          <img src="./static/images/Fig_NumOfViews.png" width="100%" style="margin-left: auto;margin-right: auto;display: block;">
+          <p> This study demonstrates that using more number of views, ranging from 2 to 9, can reduce up to 40.8% of the chamfer distances on the results of reconstruction. As can be found from the zoom-views, more input views are helpful to address radiance-ambiguity therefore contribute to the reconstruction of nuanced disparities.          </p>
+        </div>
+       
       </div>
     </div>
-    <!--/ Animation. -->
 
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
-  </div>
-</section>
-
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="./static/files/under-review">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/SERES0" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -469,16 +282,8 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Website template from <a
+              href="https://github.com/nerfies/nerfies.github.io">here</a>.
           </p>
         </div>
       </div>
